@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-focara-light relative overflow-hidden">
+      <section className="py-20 how-it-works-bg relative overflow-hidden">
         {/* Background Images */}
         <div className="absolute top-10 right-10 w-64 h-64 opacity-15 rounded-full overflow-hidden">
           <img 
@@ -216,9 +216,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0 }}
               viewport={{ once: true }}
-              className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300"
+              className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-orange-200/30"
             >
-              <div className="w-20 h-20 bg-focara-accent rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="text-white text-3xl" size={32} />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-focara-dark">Wield Your Shield</h3>
@@ -233,9 +233,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300"
+              className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-orange-200/30"
             >
-              <div className="w-20 h-20 bg-focara-accent rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="text-white text-3xl" size={32} />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-focara-dark">Gain True Clarity</h3>
@@ -250,9 +250,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300"
+              className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-orange-200/30"
             >
-              <div className="w-20 h-20 bg-focara-accent rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Handshake className="text-white text-3xl" size={32} />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-focara-dark">A Tool, Not a Warden</h3>
@@ -276,8 +276,8 @@ export default function Home() {
         </div>
         <div className="absolute top-0 right-0 w-56 h-56 opacity-6 rounded-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
-            alt="Friends outdoor picnic" 
+            src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            alt="Children playing in park" 
             className="w-full h-full object-cover" 
           />
         </div>
