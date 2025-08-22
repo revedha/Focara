@@ -180,10 +180,17 @@ export default function Home() {
       {/* How It Works Section */}
       <section className="py-20 bg-focara-light relative overflow-hidden">
         {/* Background Images */}
-        <div className="absolute top-10 right-10 w-64 h-64 opacity-10 rounded-full overflow-hidden">
+        <div className="absolute top-10 right-10 w-64 h-64 opacity-15 rounded-full overflow-hidden">
           <img 
             src="https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
             alt="Family playing in park" 
+            className="w-full h-full object-cover" 
+          />
+        </div>
+        <div className="absolute bottom-10 left-10 w-48 h-48 opacity-10 rounded-full overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            alt="People dancing outdoors" 
             className="w-full h-full object-cover" 
           />
         </div>
@@ -260,10 +267,17 @@ export default function Home() {
       {/* Waitlist Section */}
       <section id="waitlist" className="py-20 bg-white relative">
         {/* Background Images */}
-        <div className="absolute bottom-0 left-0 w-48 h-48 opacity-5 rounded-full overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-48 h-48 opacity-8 rounded-full overflow-hidden">
           <img 
             src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
             alt="People dancing together" 
+            className="w-full h-full object-cover" 
+          />
+        </div>
+        <div className="absolute top-0 right-0 w-56 h-56 opacity-6 rounded-full overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            alt="Friends outdoor picnic" 
             className="w-full h-full object-cover" 
           />
         </div>
@@ -315,7 +329,7 @@ export default function Home() {
                         {...form.register("firstName")}
                         id="firstName"
                         placeholder="First Name"
-                        className="w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
+                        className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                         data-testid="input-first-name"
                       />
                       {form.formState.errors.firstName && (
@@ -330,7 +344,7 @@ export default function Home() {
                         {...form.register("lastName")}
                         id="lastName"
                         placeholder="Last Name"
-                        className="w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
+                        className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                         data-testid="input-last-name"
                       />
                       {form.formState.errors.lastName && (
@@ -347,7 +361,7 @@ export default function Home() {
                       id="email"
                       type="email"
                       placeholder="Enter your email address"
-                      className="w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
+                      className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                       data-testid="input-email"
                     />
                     {form.formState.errors.email && (
