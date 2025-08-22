@@ -221,9 +221,12 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold mb-3 text-focara-dark">Designed to Be Deleted</h3>
+              <h3 className="text-lg font-bold mb-2 text-focara-dark">Designed to Be Deleted</h3>
+              <p className="text-orange-600 font-semibold text-sm mb-3">
+                Our goal is your success, even if it means losing a customer.
+              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Focara is built to be an ally that strengthens your own willpower. Our goal is your success, even if it means losing a customer. We want you to build such strong habits that you no longer need us. Use Focara to break free, then move on. We'll be happy for you.
+                We want you to build such strong habits that you no longer need us. Use Focara to break free, then move on. We'll be happy for you.
               </p>
             </motion.div>
             
@@ -238,9 +241,12 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold mb-3 text-focara-dark">Mindful Friction, Not Mindless Blocking</h3>
+              <h3 className="text-lg font-bold mb-2 text-focara-dark">Mindful Friction, Not Mindless Blocking</h3>
+              <p className="text-orange-600 font-semibold text-sm mb-3">
+                Focara acts as your personal shield against distraction.
+              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Focara acts as your personal shield against distraction. To access a blocked app, you must first solve a brief, maze-based cognitive challenge. This intentional hurdle breaks the habit of mindless tapping, forcing a conscious choice about whether the distraction is truly worth your focus.
+                To access a blocked app, you must first solve a brief, maze-based cognitive challenge. This intentional hurdle breaks the habit of mindless tapping, forcing a conscious choice about whether the distraction is truly worth your focus.
               </p>
             </motion.div>
             
@@ -255,9 +261,12 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Crown className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold mb-3 text-focara-dark">Empowerment Through Control</h3>
+              <h3 className="text-lg font-bold mb-2 text-focara-dark">Empowerment Through Control</h3>
+              <p className="text-orange-600 font-semibold text-sm mb-3">
+                Modern apps are designed to take away your control. Focara gives it back.
+              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Modern apps are designed to take away your control. Focara gives it back. Every time you choose not to solve the maze, it's a small victory—a conscious decision to protect your time and attention. We empower you to be the master of your device, not the other way around.
+                Every time you choose not to solve the maze, it's a small victory; a conscious decision to protect your time and attention. We empower you to be the master of your device, not the other way around.
               </p>
             </motion.div>
             
@@ -272,9 +281,12 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold mb-3 text-focara-dark">Science-Backed Habit Formation</h3>
+              <h3 className="text-lg font-bold mb-2 text-focara-dark">Science-Backed Habit Formation</h3>
+              <p className="text-orange-600 font-semibold text-sm mb-3">
+                We handle the science so you can build the habit.
+              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                We handle the science so you can build the habit. Focara is designed to help reset your brain's dopamine reward system and rewire neural pathways through consistent practice. It's a tool to help you create a new, healthier relationship with technology in a tangible way.
+                Focara is designed to help reset your brain's dopamine reward system and rewire neural pathways through consistent practice. It's a tool to help you create a new, healthier relationship with technology in a tangible way.
               </p>
             </motion.div>
             
@@ -289,9 +301,12 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold mb-3 text-focara-dark">Absolute Simplicity & Privacy</h3>
+              <h3 className="text-lg font-bold mb-2 text-focara-dark">Absolute Simplicity & Privacy</h3>
+              <p className="text-orange-600 font-semibold text-sm mb-3">
+                No nonsense. No tracking. No invasive analytics.
+              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                No nonsense. No tracking. No invasive analytics. Focara has one job: to help you focus. Your progress is for your eyes only, and we respect your privacy completely. We simply block apps and help you track the days you're distraction-free.
+                Focara has one job: to help you focus. Your progress is for your eyes only, and we respect your privacy completely. We simply block apps and help you track the days you're distraction-free.
               </p>
             </motion.div>
           </div>
