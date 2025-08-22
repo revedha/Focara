@@ -1,0 +1,63 @@
+Generate the HTML, CSS, and JavaScript files for a simple, modern, and responsive single-page landing website for a new mobile app called "Focara."
+
+1. Project Overview:
+
+App Name: Focara
+
+Brand Persona & Tone: The design and copy must be bold, strong, serious, and empowering, but not bossy. The aesthetic should be clean, minimalist, and professional, using a strong color palette (e.g., dark grays, whites, and a single bold accent color).
+
+2. Website Structure & Content (Single Page):
+
+Section 1: Our Purpose
+
+Headline: Focara: Your beacon back to real life.
+
+Body Text: In a world designed to capture your attention, Focara is your guide. The name is inspired by an Italian village that used signal fires (fuochi) as a beacon to help sailors navigate the coast. Our mission is to provide that same clarity—a powerful tool for those who are serious about breaking free from screen addiction. We believe in empowerment over restriction. Our vision is a world where your time and focus are yours to command, enabling you to achieve your goals and live a more present, fulfilling life.   
+
+Section 2: How It Works
+
+Headline: A Strong, Serious Approach to Digital Wellbeing
+
+Layout: A three-column grid. Each column should have a simple, strong icon, a title, and a short description.
+
+Column 1:
+
+Title: Wield Your Shield
+
+Description: Focara acts as your personal shield against digital distractions. You set powerful, unbreakable focus sessions that protect your time and attention, allowing for deep, meaningful work.
+
+Column 2:
+
+Title: Gain True Clarity
+
+Description: We provide serious, no-nonsense analytics that give you clear insight into your digital habits. Understand your patterns and track your progress without judgment.
+
+Column 3:
+
+Title: A Tool, Not a Warden
+
+Description: Focara is built to be an ally that strengthens your own willpower. We want you to succeed so much that we’re happy if you don’t need us forever. Use us as a tool to break free from your phone addiction and then move on.
+
+Section 3: Join the Waitlist
+
+Headline: Be the First to Take Control
+
+Sub-headline: Join the waitlist to get early access to Focara and begin your journey to reclaiming your focus.
+
+Input Form: A simple form with a single field for an email address and a prominent "Join Waitlist" button.
+
+Footer:
+
+A simple, clean, centered footer containing two lines of text:
+
+Line 1: "Apex Meridian Private Limited"
+
+Line 2: "Google Play and App Store link coming soon..."
+
+3. Technical Requirements:
+
+Use HTML for structure and CSS for styling.
+
+The website must be fully responsive and display correctly on desktop, tablet, and mobile devices.
+
+Use a modern, professional, and strong sans-serif font.
