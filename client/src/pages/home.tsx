@@ -325,8 +325,8 @@ export default function Home() {
         </div>
         <div className="absolute top-0 right-0 w-56 h-56 opacity-6 rounded-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
-            alt="Children playing in park" 
+            src="https://images.unsplash.com/photo-1587985064135-0366536eab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            alt="Children playing outdoors with bubbles" 
             className="w-full h-full object-cover" 
           />
         </div>
