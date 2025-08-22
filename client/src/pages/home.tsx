@@ -318,15 +318,15 @@ export default function Home() {
         {/* Background Images */}
         <div className="absolute bottom-0 left-0 w-48 h-48 opacity-8 rounded-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
             alt="People dancing together" 
             className="w-full h-full object-cover" 
           />
         </div>
         <div className="absolute top-0 right-0 w-56 h-56 opacity-6 rounded-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
-            alt="Family enjoying outdoor activities" 
+            src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            alt="Children playing in park" 
             className="w-full h-full object-cover" 
           />
         </div>
