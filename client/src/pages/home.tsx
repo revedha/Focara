@@ -265,19 +265,19 @@ export default function Home() {
       </section>
 
       {/* Waitlist Section */}
-      <section id="waitlist" className="py-20 bg-white relative">
+      <section id="waitlist" className="py-20 how-it-works-bg relative">
         {/* Background Images */}
         <div className="absolute bottom-0 left-0 w-48 h-48 opacity-8 rounded-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            src="https://images.unsplash.com/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
             alt="People dancing together" 
             className="w-full h-full object-cover" 
           />
         </div>
         <div className="absolute top-0 right-0 w-56 h-56 opacity-6 rounded-full overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
-            alt="Children playing in park" 
+            src="https://images.unsplash.com/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+            alt="Family enjoying outdoor activities" 
             className="w-full h-full object-cover" 
           />
         </div>
@@ -331,6 +331,7 @@ export default function Home() {
                         placeholder="First Name"
                         className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                         data-testid="input-first-name"
+                        style={{ color: 'white', WebkitTextFillColor: 'white' }}
                       />
                       {form.formState.errors.firstName && (
                         <p className="text-red-400 text-sm mt-1" data-testid="error-first-name">
@@ -346,6 +347,7 @@ export default function Home() {
                         placeholder="Last Name"
                         className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                         data-testid="input-last-name"
+                        style={{ color: 'white', WebkitTextFillColor: 'white' }}
                       />
                       {form.formState.errors.lastName && (
                         <p className="text-red-400 text-sm mt-1" data-testid="error-last-name">
@@ -363,6 +365,7 @@ export default function Home() {
                       placeholder="Enter your email address"
                       className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                       data-testid="input-email"
+                      style={{ color: 'white', WebkitTextFillColor: 'white' }}
                     />
                     {form.formState.errors.email && (
                       <p className="text-red-400 text-sm mt-1" data-testid="error-email">

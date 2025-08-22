@@ -127,32 +127,40 @@
   }
 }
 
-/* Force white text in form inputs */
-.glass-dark input {
-  color: white !important;
-}
-
-.glass-dark input::placeholder {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
-
-.glass-dark input:focus {
-  color: white !important;
-}
-
-/* Custom input styling for waitlist form */
-.waitlist-input {
+/* Force white text in all form inputs */
+input.waitlist-input {
   color: white !important;
   background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
-.waitlist-input::placeholder {
+input.waitlist-input::placeholder {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.waitlist-input:focus {
+input.waitlist-input:focus {
   color: white !important;
-  background: rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(255, 165, 0, 0.6) !important;
+}
+
+input.waitlist-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+input.waitlist-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+input.waitlist-input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Force text color on all input states */
+.glass-dark input[type="text"],
+.glass-dark input[type="email"] {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
 }
 
 /* Focara Custom Styles */
