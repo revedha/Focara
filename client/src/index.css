@@ -51,11 +51,23 @@
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   
-  /* Focara Custom Colors */
+  /* Focara Custom Colors - Default Theme */
   --focara-dark: hsl(210 15% 10%);
   --focara-gray: hsl(210 10% 16%);
   --focara-light: hsl(210 20% 98%);
   --focara-accent: hsl(188 95% 42%);
+  --warm-orange: hsl(20 100% 60%);
+  --warm-amber: hsl(30 100% 55%);
+  
+  /* Theme Variants */
+  --theme-warm-primary: hsl(25 95% 53%);
+  --theme-warm-secondary: hsl(45 90% 60%);
+  --theme-ocean-primary: hsl(200 100% 40%);
+  --theme-ocean-secondary: hsl(220 85% 50%);
+  --theme-forest-primary: hsl(150 60% 35%);
+  --theme-forest-secondary: hsl(80 70% 45%);
+  --theme-sunset-primary: hsl(340 85% 55%);
+  --theme-sunset-secondary: hsl(25 90% 60%);
 }
 
 .dark {
@@ -167,20 +179,114 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.glass-inspirational {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.purpose-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.purpose-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--focara-accent), hsl(188 80% 35%));
+  background: linear-gradient(135deg, #ff6b35, #f7931e, #ffcc02);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 800;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, var(--focara-accent), hsl(200 90% 40%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
 }
 
 /* Hero Background */
 .hero-bg {
-  background-image: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+  background-image: 
+    linear-gradient(135deg, rgba(15, 15, 15, 0.75), rgba(45, 20, 10, 0.85)),
+    url('/attached_assets/generated_images/Real_life_outdoor_activities_acaec5e1.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 100, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 140, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 69, 0, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Theme Variations */
+.theme-warm {
+  --focara-accent: var(--theme-warm-primary);
+  --warm-orange: var(--theme-warm-secondary);
+}
+
+.theme-ocean {
+  --focara-accent: var(--theme-ocean-primary);
+  --warm-orange: var(--theme-ocean-secondary);
+}
+
+.theme-forest {
+  --focara-accent: var(--theme-forest-primary);
+  --warm-orange: var(--theme-forest-secondary);
+}
+
+.theme-sunset {
+  --focara-accent: var(--theme-sunset-primary);
+  --warm-orange: var(--theme-sunset-secondary);
+}
+
+/* Fiery Elements */
+.fire-glow {
+  box-shadow: 0 0 20px rgba(255, 100, 0, 0.3), 0 0 40px rgba(255, 140, 0, 0.2);
+}
+
+.fire-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #ff6b35, #f7931e);
+  border-radius: 50%;
+  animation: fireParticle 3s infinite ease-in-out;
+}
+
+@keyframes fireParticle {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-20px) scale(0.8); opacity: 0.7; }
+  100% { transform: translateY(-40px) scale(0.4); opacity: 0; }
 }
 
 /* Animations */
