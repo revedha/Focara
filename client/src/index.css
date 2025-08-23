@@ -127,40 +127,40 @@
   }
 }
 
-/* Force white text in all form inputs */
+/* Force black text in all form inputs for visibility */
 input.waitlist-input {
-  color: white !important;
-  background: rgba(255, 255, 255, 0.15) !important;
+  color: black !important;
+  background: rgba(255, 255, 255, 0.85) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 input.waitlist-input::placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(100, 100, 100, 0.8) !important;
 }
 
 input.waitlist-input:focus {
-  color: white !important;
-  background: rgba(255, 255, 255, 0.25) !important;
+  color: black !important;
+  background: rgba(255, 255, 255, 0.95) !important;
   border-color: rgba(255, 165, 0, 0.6) !important;
 }
 
 input.waitlist-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(100, 100, 100, 0.8) !important;
 }
 
 input.waitlist-input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(100, 100, 100, 0.8) !important;
 }
 
 input.waitlist-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(100, 100, 100, 0.8) !important;
 }
 
-/* Force text color on all input states */
+/* Force black text color on all input states */
 .glass-dark input[type="text"],
 .glass-dark input[type="email"] {
-  color: white !important;
-  -webkit-text-fill-color: white !important;
+  color: black !important;
+  -webkit-text-fill-color: black !important;
 }
 
 /* Focara Custom Styles */

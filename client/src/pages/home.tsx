@@ -380,7 +380,7 @@ export default function Home() {
                         placeholder="First Name"
                         className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                         data-testid="input-first-name"
-                        style={{ color: 'white', WebkitTextFillColor: 'white' }}
+                        style={{ color: 'black', WebkitTextFillColor: 'black' }}
                       />
                       {form.formState.errors.firstName && (
                         <p className="text-red-400 text-sm mt-1" data-testid="error-first-name">
@@ -396,7 +396,7 @@ export default function Home() {
                         placeholder="Last Name"
                         className="waitlist-input w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white placeholder-gray-200 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-400/50 transition-all duration-300"
                         data-testid="input-last-name"
-                        style={{ color: 'white', WebkitTextFillColor: 'white' }}
+                        style={{ color: 'black', WebkitTextFillColor: 'black' }}
                       />
                       {form.formState.errors.lastName && (
                         <p className="text-red-400 text-sm mt-1" data-testid="error-last-name">
