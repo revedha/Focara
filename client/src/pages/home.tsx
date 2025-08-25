@@ -221,12 +221,9 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="text-white" size={24} />
               </div>
-              <h3 className="text-lg font-bold mb-2 text-focara-dark">Designed to Be Deleted</h3>
-              <p className="text-orange-600 font-semibold text-sm mb-3">
-                Our goal is your success, even if it means losing a customer.
-              </p>
+              <h3 className="text-lg font-bold mb-2 text-focara-dark">Designed For Your Success</h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                We want you to build such strong habits that you no longer need us. Use Focara to break free, then move on. We'll be happy for you.
+                Our goal is your graduation. We help you build habits so strong that you no longer need us. When you're ready to break free and move on, we'll be the first to celebrate your success.
               </p>
             </motion.div>
             
@@ -243,7 +240,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold mb-2 text-focara-dark">Mindful Friction, Not Mindless Blocking</h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Focara intercepts mindless app-opening with a brief, engaging cognitive challenge—like a maze or a logic puzzle. This moment of active engagement breaks the habit loop in a way passive timers can't, empowering you to make a conscious choice.
+                Instead of a frustrating wall, Focara presents a brief, engaging challenge—like a maze or logic puzzle. This moment of mindful friction breaks the habit of mindless scrolling, empowering you to make a conscious choice.
               </p>
             </motion.div>
             
@@ -259,11 +256,8 @@ export default function Home() {
                 <Crown className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-bold mb-2 text-focara-dark">Empowerment Through Control</h3>
-              <p className="text-orange-600 font-semibold text-sm mb-3">
-                Modern apps are designed to take away your control. Focara gives it back.
-              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Every time you choose not to solve the maze, it's a small victory; a conscious decision to protect your time and attention. We empower you to be the master of your device, not the other way around.
+                Modern apps are designed to capture your attention; Focara is designed to give it back. Every time you pause, the decision is yours. You are the master of your device, not the other way around.
               </p>
             </motion.div>
             
@@ -279,11 +273,8 @@ export default function Home() {
                 <Brain className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-bold mb-2 text-focara-dark">Science-Backed Habit Formation</h3>
-              <p className="text-orange-600 font-semibold text-sm mb-3">
-                We handle the science so you can build the habit.
-              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Focara is designed to help reset your brain's dopamine reward system and rewire neural pathways through consistent practice. It's a tool to help you create a new, healthier relationship with technology in a tangible way.
+                We handle the science so you can build the habit. Focara uses proven principles of behavioral psychology to help you gently rewire neural pathways and build a healthier relationship with technology.
               </p>
             </motion.div>
             
@@ -299,11 +290,8 @@ export default function Home() {
                 <Lock className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-bold mb-2 text-focara-dark">Absolute Simplicity & Privacy</h3>
-              <p className="text-orange-600 font-semibold text-sm mb-3">
-                No nonsense. No tracking. No invasive analytics.
-              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Focara has one job: to help you focus. Your progress is for your eyes only, and we respect your privacy completely. We simply block apps and help you track the days you're distraction-free.
+                No nonsense. No tracking. Focara has one job: to help you focus. Your progress is for your eyes only. We respect your privacy completely by design, never using invasive analytics.
               </p>
             </motion.div>
           </div>
