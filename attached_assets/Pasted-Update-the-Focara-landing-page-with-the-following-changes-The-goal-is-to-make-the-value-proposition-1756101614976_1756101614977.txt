@@ -1,0 +1,53 @@
+Update the Focara landing page with the following changes. The goal is to make the value proposition more concrete, build trust with science-backed evidence, clarify the ethical pricing model, and create a stronger call-to-action to validate user commitment.
+
+1. Update the "A Strong, Serious Approach to Digital Wellbeing" Section:
+
+Modify the "Mindful Friction, Not Mindless Blocking" item.
+
+New Headline: Mindful Friction, Not Mindless Blocking
+
+New Body Copy: Focara intercepts mindless app-opening with a brief, engaging cognitive challenge—like a maze or a logic puzzle. This moment of active engagement breaks the habit loop in a way passive timers can't, empowering you to make a conscious choice.
+
+2. Add a New Section: "Grounded in Science, Designed for Results"
+
+Please add this new section after the "A Strong, Serious Approach" section.
+
+Headline: Grounded in Science, Designed for Results
+
+Body Copy: Focara is built on proven principles of behavioral psychology. We disrupt the brain's "Habit Loop" (Cue -> Routine -> Reward) by introducing 'Cognitive Friction'—a positive interruption that forces a moment of intentional thought. This scientifically-backed method helps weaken old neural pathways and build new, healthier ones.
+
+3. Add a New Section: "Our Pricing & Philosophy"
+
+Please add this new section after the "Grounded in Science" section.
+
+Headline: A Model That Puts You First
+
+Sub-headline: We succeed when you no longer need us. That's why we reject recurring subscriptions.
+
+Display the following two pricing plans side-by-side:
+
+Plan 1 Title: 3-Month Focus Pass
+
+Plan 1 Price: $19.99
+
+Plan 1 Description: A one-time payment for a dedicated, short-term transformation.
+
+Plan 2 Title: 6-Month Habit-Building Pass (Most Popular)
+
+Plan 2 Price: $29.99
+
+Plan 2 Description: A one-time payment to solidify your new habits for life.
+
+Trust Statement (below both plans): ✅ This is a one-time purchase, not a subscription.
+
+4. Update the Final Call-to-Action Section:
+
+Replace the current "Be the First to Take Control" section with the following:
+
+New Headline: Ready to Reclaim Your Focus?
+
+New Sub-headline: Join the early access list to be the first to get Focara and lock in a 50% founder's discount.
+
+Form Fields: First Name, Last Name, Email Address.
+
+Button Text: Request Early Access & Lock In My Discount

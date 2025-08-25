@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Shield, TrendingUp, Handshake, Loader2, Palette, Target, Crown, Brain, Lock } from "lucide-react";
+import { Shield, TrendingUp, Handshake, Loader2, Palette, Target, Crown, Brain, Lock, Microscope, DollarSign, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 type WaitlistForm = {
@@ -242,11 +242,8 @@ export default function Home() {
                 <Shield className="text-white" size={24} />
               </div>
               <h3 className="text-lg font-bold mb-2 text-focara-dark">Mindful Friction, Not Mindless Blocking</h3>
-              <p className="text-orange-600 font-semibold text-sm mb-3">
-                Focara acts as your personal shield against distraction.
-              </p>
               <p className="text-gray-700 leading-relaxed text-sm">
-                To access a blocked app, you must first solve a brief, maze-based cognitive challenge. This intentional hurdle breaks the habit of mindless tapping, forcing a conscious choice about whether the distraction is truly worth your focus.
+                Focara intercepts mindless app-opening with a brief, engaging cognitive challenge—like a maze or a logic puzzle. This moment of active engagement breaks the habit loop in a way passive timers can't, empowering you to make a conscious choice.
               </p>
             </motion.div>
             
@@ -313,6 +310,108 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Grounded in Science Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Microscope className="text-white" size={32} />
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-focara-dark">
+                Grounded in Science, Designed for Results
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Focara is built on proven principles of behavioral psychology. We disrupt the brain's "Habit Loop" (Cue → Routine → Reward) by introducing 'Cognitive Friction'—a positive interruption that forces a moment of intentional thought. This scientifically-backed method helps weaken old neural pathways and build new, healthier ones.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing & Philosophy Section */}
+      <section className="py-20 how-it-works-bg relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-focara-dark">
+                A Model That Puts You First
+              </h2>
+              <p className="text-xl text-gray-600 mb-12">
+                We succeed when you no longer need us. That's why we reject recurring subscriptions.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* 3-Month Plan */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-orange-200/30"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <DollarSign className="text-white" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold mb-2 text-focara-dark">3-Month Focus Pass</h3>
+                <div className="text-4xl font-bold text-orange-600 mb-4">$19.99</div>
+                <p className="text-gray-700 leading-relaxed">
+                  A one-time payment for a dedicated, short-term transformation.
+                </p>
+              </motion.div>
+
+              {/* 6-Month Plan */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="glass-effect rounded-3xl p-8 text-center hover:transform hover:scale-105 transition-all duration-300 border-2 border-orange-200/30 relative"
+              >
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  Most Popular
+                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Crown className="text-white" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold mb-2 text-focara-dark">6-Month Habit-Building Pass</h3>
+                <div className="text-4xl font-bold text-orange-600 mb-4">$29.99</div>
+                <p className="text-gray-700 leading-relaxed">
+                  A one-time payment to solidify your new habits for life.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Trust Statement */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <div className="flex items-center justify-center space-x-2 text-green-600 font-semibold text-lg">
+                <CheckCircle size={24} />
+                <span>This is a one-time purchase, not a subscription.</span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Waitlist Section */}
       <section id="waitlist" className="py-20 how-it-works-bg relative">
         {/* Background Images */}
@@ -340,10 +439,10 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-focara-dark">
-                Be the First to Take Control
+                Ready to Reclaim Your Focus?
               </h2>
               <p className="text-xl mb-12 text-gray-600">
-                Join the waitlist to get early access to Focara and begin your journey to reclaiming your focus.
+                Join the early access list to be the first to get Focara and lock in a 50% founder's discount.
               </p>
               
               {waitlistCount && (
@@ -434,7 +533,7 @@ export default function Home() {
                         Joining...
                       </>
                     ) : (
-                      'Join Waitlist'
+                      'Request Early Access & Lock In My Discount'
                     )}
                   </Button>
                 </form>
