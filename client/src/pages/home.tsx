@@ -316,7 +316,7 @@ export default function Home() {
                 Grounded in Science, Designed for Results
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Focara is built on proven principles of behavioral psychology. We disrupt the brain's "Habit Loop" (Cue → Routine → Reward) by introducing 'Cognitive Friction'—a positive interruption that forces a moment of intentional thought. This scientifically-backed method helps weaken old neural pathways and build new, healthier ones.
+                Focara is built on proven principles of behavioral psychology. We disrupt the brain's "Habit Loop" (Cue → Routine → Reward) by introducing 'Cognitive Friction'; a positive interruption that forces a moment of intentional thought. This scientifically-backed method helps weaken old neural pathways and build new, healthier ones.
               </p>
             </motion.div>
           </div>
