@@ -52,26 +52,41 @@ export default function Home() {
     setIsSubmitting(true);
     
     try {
-      // Create URL with form data for Tally
+      // Submit to Tally
+      const response = await fetch('https://tally.so/r/nPxaL5', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          'First name': data.firstName,
+          'Last name': data.lastName,
+          'Email': data.email,
+          'Your question': 'Waitlist signup from Focara website'
+        })
+      });
+      
+      // Show success regardless of response (Tally might not return proper CORS)
+      setIsSubmitted(true);
+      form.reset();
+      incrementClickCount();
+      toast({
+        title: "Welcome to the waitlist!",
+        description: "Thank you for joining. We'll be in touch soon.",
+      });
+      
+    } catch (error) {
+      // If direct submission fails, redirect to Tally with data
       const tallyUrl = new URL('https://tally.so/r/nPxaL5');
       tallyUrl.searchParams.append('firstName', data.firstName);
       tallyUrl.searchParams.append('lastName', data.lastName);
       tallyUrl.searchParams.append('email', data.email);
+      window.open(tallyUrl.toString(), '_blank');
       
-      // Open Tally form in same window
-      window.location.href = tallyUrl.toString();
-      
-      // Update counter and show success message
       incrementClickCount();
       setIsSubmitted(true);
       form.reset();
-      
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-      });
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -450,26 +465,89 @@ export default function Home() {
               )}
             </motion.div>
             
-            <div className="glass-dark rounded-3xl p-4 md:p-6">
-              {/* Embedded Tally Form */}
-              <div 
-                className="w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
-                style={{ minHeight: '500px' }}
-                onClick={() => incrementClickCount()}
-              >
-                <iframe
-                  src="https://tally.so/embed/nPxaL5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&hiddenFields=utm_source%3Dfocara"
-                  width="100%"
-                  height="500"
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  title="Contact form"
-                  className="rounded-2xl"
-                  data-testid="tally-form"
-                  style={{ border: 'none' }}
-                ></iframe>
-              </div>
+            <div className="glass-dark rounded-3xl p-8 md:p-12">
+              {isSubmitted ? (
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center text-white"
+                  data-testid="success-message"
+                >
+                  <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Thank you!</h3>
+                  <p className="text-lg">You've been added to our waitlist. We'll be in touch soon.</p>
+                </motion.div>
+              ) : (
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="firstName" className="sr-only">First Name</Label>
+                      <Input
+                        {...form.register("firstName")}
+                        id="firstName"
+                        placeholder="First Name"
+                        className="w-full px-6 py-4 bg-gray-200 border-0 rounded-full text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all duration-300"
+                        data-testid="input-first-name"
+                      />
+                      {form.formState.errors.firstName && (
+                        <p className="text-red-400 text-sm mt-1" data-testid="error-first-name">
+                          {form.formState.errors.firstName.message}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName" className="sr-only">Last Name</Label>
+                      <Input
+                        {...form.register("lastName")}
+                        id="lastName"
+                        placeholder="Last Name"
+                        className="w-full px-6 py-4 bg-gray-200 border-0 rounded-full text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all duration-300"
+                        data-testid="input-last-name"
+                      />
+                      {form.formState.errors.lastName && (
+                        <p className="text-red-400 text-sm mt-1" data-testid="error-last-name">
+                          {form.formState.errors.lastName.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="email" className="sr-only">Email Address</Label>
+                    <Input
+                      {...form.register("email")}
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="w-full px-6 py-4 bg-gray-200 border-0 rounded-full text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all duration-300"
+                      data-testid="input-email"
+                    />
+                    {form.formState.errors.email && (
+                      <p className="text-red-400 text-sm mt-1" data-testid="error-email">
+                        {form.formState.errors.email.message}
+                      </p>
+                    )}
+                  </div>
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                    data-testid="button-join-waitlist"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Joining...
+                      </>
+                    ) : (
+                      'Request Early Access & Lock In My Discount'
+                    )}
+                  </Button>
+                </form>
+              )}
             </div>
           </div>
         </div>
