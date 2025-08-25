@@ -451,11 +451,6 @@ export default function Home() {
             </motion.div>
             
             <div className="glass-dark rounded-3xl p-4 md:p-6">
-              <div className="text-center text-white mb-6">
-                <h3 className="text-2xl font-bold mb-2">Join the Waitlist</h3>
-                <p className="text-lg opacity-90">Get early access and lock in your 50% founder's discount</p>
-              </div>
-              
               {/* Embedded Tally Form */}
               <div 
                 className="w-full bg-white rounded-2xl overflow-hidden shadow-2xl"
@@ -463,7 +458,7 @@ export default function Home() {
                 onClick={() => incrementClickCount()}
               >
                 <iframe
-                  src="https://tally.so/embed/nPxaL5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  src="https://tally.so/embed/nPxaL5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&hiddenFields=utm_source%3Dfocara"
                   width="100%"
                   height="500"
                   frameBorder="0"
@@ -472,6 +467,7 @@ export default function Home() {
                   title="Contact form"
                   className="rounded-2xl"
                   data-testid="tally-form"
+                  style={{ border: 'none' }}
                 ></iframe>
               </div>
             </div>
