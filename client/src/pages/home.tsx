@@ -456,7 +456,7 @@ export default function Home() {
               
               {clickCount > 0 && (
                 <p className="text-sm text-gray-500 mb-4" data-testid="text-waitlist-count">
-                  {clickCount} people have clicked
+                  {clickCount} people have joined
                 </p>
               )}
             </motion.div>
