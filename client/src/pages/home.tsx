@@ -52,40 +52,37 @@ export default function Home() {
     setIsSubmitting(true);
     
     try {
-      // Submit to Tally
-      const response = await fetch('https://tally.so/r/nPxaL5', {
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/xzzapolg', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
-        body: new URLSearchParams({
-          'First name': data.firstName,
-          'Last name': data.lastName,
-          'Email': data.email,
-          'Your question': 'Waitlist signup from Focara website'
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+          message: 'Waitlist signup from Focara website'
         })
       });
-      
-      // Show success regardless of response (Tally might not return proper CORS)
-      setIsSubmitted(true);
-      form.reset();
-      incrementClickCount();
-      toast({
-        title: "Welcome to the waitlist!",
-        description: "Thank you for joining. We'll be in touch soon.",
-      });
-      
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+        incrementClickCount();
+        toast({
+          title: "Welcome to the waitlist!",
+          description: "Thank you for joining. We'll be in touch soon.",
+        });
+      } else {
+        throw new Error('Submission failed');
+      }
     } catch (error) {
-      // If direct submission fails, redirect to Tally with data
-      const tallyUrl = new URL('https://tally.so/r/nPxaL5');
-      tallyUrl.searchParams.append('firstName', data.firstName);
-      tallyUrl.searchParams.append('lastName', data.lastName);
-      tallyUrl.searchParams.append('email', data.email);
-      window.open(tallyUrl.toString(), '_blank');
-      
-      incrementClickCount();
-      setIsSubmitted(true);
-      form.reset();
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+      });
     } finally {
       setIsSubmitting(false);
     }
