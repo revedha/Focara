@@ -175,7 +175,7 @@ export default function Home() {
                 </div>
                 <div className="relative z-10">
                   <p className="text-lg md:text-xl leading-relaxed mb-6 font-medium">
-                    The name is inspired by an Italian village that used signal fires (fuochi) as a beacon to help sailors navigate the coast. Our mission is to provide that same clarity—a powerful tool for those who are serious about breaking free from screen addiction.
+                    The name is inspired by an Italian village that used signal fires (fuochi) as a beacon to help sailors navigate the coast. Our mission is to provide that same clarity; a powerful tool for those who are serious about breaking free from screen addiction.
                   </p>
                   <p className="text-lg md:text-xl leading-relaxed font-medium">
                     We believe in empowerment over restriction. Our vision is a world where your time and focus are yours to command, enabling you to achieve your goals and live with intention.
