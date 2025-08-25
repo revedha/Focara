@@ -558,7 +558,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-700 pt-8">
-            <p className="text-gray-400 mb-2">Apex Meridian Private Limited</p>
+            <p className="text-gray-400 mb-2">Questions? support@focara.app</p>
             <p className="text-gray-500 text-sm">© 2025 Focara. All rights reserved.</p>
           </div>
         </div>
