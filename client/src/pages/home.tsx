@@ -240,7 +240,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-bold mb-2 text-focara-dark">Mindful Friction, Not Mindless Blocking</h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Instead of a frustrating wall, Focara presents a brief, engaging challenge—like a maze or logic puzzle. This moment of mindful friction breaks the habit of mindless scrolling, empowering you to make a conscious choice.
+                Instead of a frustrating wall, Focara presents a brief, engaging challenge; like a maze or logic puzzle. This moment of mindful friction breaks the habit of mindless scrolling, empowering you to make a conscious choice.
               </p>
             </motion.div>
             
