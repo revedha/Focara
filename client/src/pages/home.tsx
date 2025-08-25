@@ -52,37 +52,26 @@ export default function Home() {
     setIsSubmitting(true);
     
     try {
-      const formData = new FormData();
-      formData.append('firstName', data.firstName);
-      formData.append('lastName', data.lastName);
-      formData.append('email', data.email);
+      // Create URL with form data for Tally
+      const tallyUrl = new URL('https://tally.so/r/nPxaL5');
+      tallyUrl.searchParams.append('firstName', data.firstName);
+      tallyUrl.searchParams.append('lastName', data.lastName);
+      tallyUrl.searchParams.append('email', data.email);
       
-      const response = await fetch('https://formspree.io/f/xzzapolg', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+      // Open Tally form in same window
+      window.location.href = tallyUrl.toString();
       
-      if (response.ok) {
-        setIsSubmitted(true);
-        form.reset();
-        incrementClickCount();
-        toast({
-          title: "Welcome to the waitlist!",
-          description: "Thank you for joining. We'll be in touch soon.",
-        });
-      } else {
-        throw new Error('Failed to submit form');
-      }
+      // Update counter and show success message
+      incrementClickCount();
+      setIsSubmitted(true);
+      form.reset();
+      
     } catch (error) {
       toast({
         variant: "destructive",
         title: "Error",
         description: "Something went wrong. Please try again.",
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
