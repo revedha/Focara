@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { insertWaitlistRegistrationSchema } from "@shared/schema";
-import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -17,16 +15,18 @@ type WaitlistForm = {
   email: string;
 };
 
-const waitlistSchema = insertWaitlistRegistrationSchema.extend({
-  firstName: insertWaitlistRegistrationSchema.shape.firstName.min(1, "First name is required"),
-  lastName: insertWaitlistRegistrationSchema.shape.lastName.min(1, "Last name is required"),
-  email: insertWaitlistRegistrationSchema.shape.email.email("Please enter a valid email address"),
+const waitlistSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().min(1, "Last name is required"),
+  email: z.string().email("Please enter a valid email address"),
 });
 
 export default function Home() {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [currentTheme, setCurrentTheme] = useState('default');
+  const [clickCount, setClickCount] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<WaitlistForm>({
     resolver: zodResolver(waitlistSchema),
@@ -37,36 +37,54 @@ export default function Home() {
     },
   });
 
-  const { data: waitlistCount } = useQuery<{ count: number }>({
-    queryKey: ["/api/waitlist/count"],
-  });
+  useEffect(() => {
+    const count = localStorage.getItem('focara-button-clicks');
+    setClickCount(count ? parseInt(count, 10) : 0);
+  }, []);
 
-  const mutation = useMutation({
-    mutationFn: async (data: WaitlistForm) => {
-      return apiRequest("POST", "/api/waitlist", data);
-    },
-    onSuccess: () => {
-      setIsSubmitted(true);
-      form.reset();
-      toast({
-        title: "Welcome to the waitlist!",
-        description: "Thank you for joining. We'll be in touch soon.",
+  const incrementClickCount = () => {
+    const newCount = clickCount + 1;
+    setClickCount(newCount);
+    localStorage.setItem('focara-button-clicks', newCount.toString());
+  };
+
+  const onSubmit = async (data: WaitlistForm) => {
+    setIsSubmitting(true);
+    
+    try {
+      const formData = new FormData();
+      formData.append('firstName', data.firstName);
+      formData.append('lastName', data.lastName);
+      formData.append('email', data.email);
+      
+      const response = await fetch('https://formspree.io/f/xzzapolg', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-      // Invalidate and refetch waitlist count
-      queryClient.invalidateQueries({ queryKey: ["/api/waitlist/count"] });
-    },
-    onError: (error: any) => {
-      const message = error.message || "Something went wrong. Please try again.";
+      
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+        incrementClickCount();
+        toast({
+          title: "Welcome to the waitlist!",
+          description: "Thank you for joining. We'll be in touch soon.",
+        });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
       toast({
         variant: "destructive",
         title: "Error",
-        description: message,
+        description: "Something went wrong. Please try again.",
       });
-    },
-  });
-
-  const onSubmit = (data: WaitlistForm) => {
-    mutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const themes = [
@@ -134,7 +152,10 @@ export default function Home() {
             </p>
             <div className="flex justify-center">
               <Button 
-                onClick={() => document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => {
+                  incrementClickCount();
+                  document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
                 data-testid="button-join-movement"
               >
@@ -433,9 +454,9 @@ export default function Home() {
                 Join the early access list to be the first to get Focara and lock in a 50% founder's discount.
               </p>
               
-              {waitlistCount && (
+              {clickCount > 0 && (
                 <p className="text-sm text-gray-500 mb-4" data-testid="text-waitlist-count">
-                  {waitlistCount.count} people have already joined
+                  {clickCount} people have clicked
                 </p>
               )}
             </motion.div>
@@ -511,11 +532,11 @@ export default function Home() {
                   </div>
                   <Button 
                     type="submit" 
-                    disabled={mutation.isPending}
+                    disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
                     data-testid="button-join-waitlist"
                   >
-                    {mutation.isPending ? (
+                    {isSubmitting ? (
                       <>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                         Joining...
